@@ -1,0 +1,477 @@
+@extends('layouts.app')
+
+@section('content')
+<div class="container">
+    <div class="page-header">
+        <h1>Laporan Survey Kepuasan Masyarakat</h1>
+        <div class="breadcrumb">
+            <a href="{{ url('/ppid') }}">Beranda</a> / <a href="{{ url('/laporan') }}">Laporan</a> / Laporan Survey Kepuasan Masyarakat
+        </div>
+    </div>
+    
+    <div class="content-section">
+        <div class="content-card">
+            <h2>Laporan Survey Kepuasan Masyarakat PPID BBIA</h2>
+            <p>Berikut adalah laporan hasil survey kepuasan masyarakat terhadap layanan informasi publik PPID BBIA yang dilaksanakan secara berkala.</p>
+            
+            <div class="survey-grid">
+                <div class="survey-item">
+                    <div class="survey-header">
+                        <h3>Survey Tahun 2025</h3>
+                        <span class="survey-period">Semester II 2025</span>
+                    </div>
+                    <div class="survey-stats">
+                        <div class="stat-item">
+                            <div class="stat-number">4.2</div>
+                            <div class="stat-label">Skor Kepuasan</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">85%</div>
+                            <div class="stat-label">Tingkat Kepuasan</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">250</div>
+                            <div class="stat-label">Responden</div>
+                        </div>
+                    </div>
+                    <div class="survey-actions">
+                        <a href="#" class="btn-link">Download Lengkap →</a>
+                        <a href="#" class="btn-link">Ringkasan →</a>
+                    </div>
+                </div>
+                
+                <div class="survey-item">
+                    <div class="survey-header">
+                        <h3>Survey Tahun 2024</h3>
+                        <span class="survey-period">Semester II 2024</span>
+                    </div>
+                    <div class="survey-stats">
+                        <div class="stat-item">
+                            <div class="stat-number">4.1</div>
+                            <div class="stat-label">Skor Kepuasan</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">82%</div>
+                            <div class="stat-label">Tingkat Kepuasan</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">230</div>
+                            <div class="stat-label">Responden</div>
+                        </div>
+                    </div>
+                    <div class="survey-actions">
+                        <a href="#" class="btn-link">Download Lengkap →</a>
+                        <a href="#" class="btn-link">Ringkasan →</a>
+                    </div>
+                </div>
+                
+                <div class="survey-item">
+                    <div class="survey-header">
+                        <h3>Survey Tahun 2023</h3>
+                        <span class="survey-period">Semester II 2023</span>
+                    </div>
+                    <div class="survey-stats">
+                        <div class="stat-item">
+                            <div class="stat-number">3.9</div>
+                            <div class="stat-label">Skor Kepuasan</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">78%</div>
+                            <div class="stat-label">Tingkat Kepuasan</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">210</div>
+                            <div class="stat-label">Responden</div>
+                        </div>
+                    </div>
+                    <div class="survey-actions">
+                        <a href="#" class="btn-link">Download Lengkap →</a>
+                        <a href="#" class="btn-link">Ringkasan →</a>
+                    </div>
+                </div>
+            </div>
+            
+            <h2>Trend Kepuasan</h2>
+            <div class="trend-chart">
+                <div class="chart-container">
+                    <h3>Grafik Kepuasan 2021-2025</h3>
+                    <div class="chart-bars">
+                        <div class="bar-item">
+                            <div class="bar" style="height: 78%"></div>
+                            <span>2021</span>
+                            <span class="value">3.9</span>
+                        </div>
+                        <div class="bar-item">
+                            <div class="bar" style="height: 82%"></div>
+                            <span>2022</span>
+                            <span class="value">4.1</span>
+                        </div>
+                        <div class="bar-item">
+                            <div class="bar" style="height: 85%"></div>
+                            <span>2023</span>
+                            <span class="value">4.2</span>
+                        </div>
+                        <div class="bar-item">
+                            <div class="bar" style="height: 78%"></div>
+                            <span>2024</span>
+                            <span class="value">4.1</span>
+                        </div>
+                        <div class="bar-item">
+                            <div class="bar" style="height: 85%"></div>
+                            <span>2025</span>
+                            <span class="value">4.2</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <h2>Metodologi Survey</h2>
+            <div class="methodology-section">
+                <div class="method-item">
+                    <h3>📊 Metode Sampling</h3>
+                    <p>Simple random sampling dengan tingkat kepercayaan 95% dan margin error 5%.</p>
+                </div>
+                
+                <div class="method-item">
+                    <h3>📋 Instrumen Survey</h3>
+                    <p>Kuesioner terstruktur dengan skala Likert 1-5 untuk mengukur kepuasan masyarakat.</p>
+                </div>
+                
+                <div class="method-item">
+                    <h3>👥 Responden</h3>
+                    <p>Masyarakat pengguna layanan informasi publik dari berbagai latar belakang.</p>
+                </div>
+                
+                <div class="method-item">
+                    <h3>📅 Waktu Pelaksanaan</h3>
+                    <p>Survey dilaksanakan setiap semester dengan durasi 2 minggu.</p>
+                </div>
+            </div>
+            
+            <h2>Analisis Hasil</h2>
+            <div class="analysis-section">
+                <div class="analysis-item">
+                    <h3>📈 Faktor Kepuasan</h3>
+                    <ul>
+                        <li><strong>Kecepatan Layanan:</strong> Korelasi positif dengan kepuasan tinggi</li>
+                        <li><strong>Kualitas Informasi:</strong> Faktor dominan dalam kepuasan pengguna</li>
+                        <li><strong>Profesionalisme Petugas:</strong> Meningkatkan kepercayaan masyarakat</li>
+                        <li><strong>Kemudahan Akses:</strong> Kemudahan akses meningkatkan frekuensi penggunaan</li>
+                    </ul>
+                </div>
+                
+                <div class="analysis-item">
+                    <h3>🎯 Rekomendasi</h3>
+                    <ul>
+                        <li>Meningkatkan kualitas dan kecepatan layanan informasi publik</li>
+                        <li>Melakukan pelatihan rutin kepada petugas PPID</li>
+                        <li>Mengembangkan sistem informasi yang lebih user-friendly</li>
+                        <li>Meningkatkan komunikasi dengan masyarakat</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <h2>Informasi Kontak</h2>
+            <div class="contact-box">
+                <p>Untuk informasi lebih lanjut mengenai survey kepuasan masyarakat, hubungi:</p>
+                <ul>
+                    <li><strong>Telepon:</strong> (0251) 8324068</li>
+                    <li><strong>Email:</strong> ppid@bbia.go.id</li>
+                    <li><strong>WhatsApp:</strong> +62 812-3456-7890</li>
+                    <li><strong>Alamat:</strong> Jl. Ir. H. Juanda No. 11, Bogor</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+.page-header {
+    background: linear-gradient(135deg, #1a3a5f, #2c5282);
+    color: white;
+    padding: 40px 0;
+    margin-bottom: 40px;
+}
+
+.page-header h1 {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.breadcrumb {
+    font-size: 14px;
+    opacity: 0.8;
+}
+
+.breadcrumb a {
+    color: white;
+    text-decoration: none;
+}
+
+.breadcrumb a:hover {
+    text-decoration: underline;
+}
+
+.content-section {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.content-card {
+    background: white;
+    border-radius: 10px;
+    padding: 40px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.content-card h2 {
+    color: #1a3a5f;
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    margin-top: 30px;
+}
+
+.content-card h2:first-child {
+    margin-top: 0;
+}
+
+.content-card p {
+    color: #333;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.content-card ul {
+    color: #333;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    padding-left: 20px;
+}
+
+.content-card li {
+    margin-bottom: 8px;
+}
+
+.survey-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+    margin: 30px 0;
+}
+
+.survey-item {
+    background: #f8f9fa;
+    border: 2px solid #1a3a5f;
+    border-radius: 10px;
+    padding: 25px;
+}
+
+.survey-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.survey-header h3 {
+    color: #1a3a5f;
+    font-size: 18px;
+    font-weight: 600;
+    margin: 0;
+}
+
+.survey-period {
+    background: #1a3a5f;
+    color: white;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.survey-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.stat-item {
+    background: #1a3a5f;
+    color: white;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+}
+
+.stat-number {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.stat-label {
+    font-size: 14px;
+    opacity: 0.8;
+}
+
+.survey-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.btn-link {
+    color: #1a3a5f;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 8px 16px;
+    border: 1px solid #1a3a5f;
+    border-radius: 5px;
+    font-size: 12px;
+    display: inline-block;
+}
+
+.btn-link:hover {
+    background: #1a3a5f;
+    color: white;
+}
+
+.trend-chart {
+    background: #f8f9fa;
+    border: 2px solid #1a3a5f;
+    border-radius: 10px;
+    padding: 25px;
+    margin: 30px 0;
+}
+
+.chart-container h3 {
+    color: #1a3a5f;
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.chart-bars {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+    height: 150px;
+    margin-bottom: 10px;
+}
+
+.bar-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+}
+
+.bar {
+    width: 40px;
+    background: #1a3a5f;
+    border-radius: 5px 5px 0 0;
+    margin-bottom: 5px;
+}
+
+.bar-item span {
+    font-size: 12px;
+    color: #333;
+    text-align: center;
+}
+
+.bar-item .value {
+    font-weight: 600;
+    color: #1a3a5f;
+}
+
+.methodology-section {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin: 30px 0;
+}
+
+.method-item {
+    background: #f8f9fa;
+    border: 2px solid #1a3a5f;
+    border-radius: 10px;
+    padding: 25px;
+    text-align: center;
+}
+
+.method-item h3 {
+    color: #1a3a5f;
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.method-item p {
+    color: #333;
+    font-size: 14px;
+    line-height: 1.5;
+    margin: 0;
+}
+
+.analysis-section {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin: 30px 0;
+}
+
+.analysis-item {
+    background: #f8f9fa;
+    border: 2px solid #1a3a5f;
+    border-radius: 10px;
+    padding: 25px;
+    text-align: center;
+}
+
+.analysis-item h3 {
+    color: #1a3a5f;
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.analysis-item ul {
+    color: #333;
+    line-height: 1.6;
+    margin-bottom: 0;
+}
+
+.analysis-item li {
+    margin-bottom: 8px;
+}
+
+.contact-box {
+    background: #1a3a5f;
+    color: white;
+    border-radius: 10px;
+    padding: 25px;
+    margin: 20px 0;
+}
+
+.contact-box p {
+    color: white;
+    margin-bottom: 15px;
+}
+
+.contact-box ul {
+    color: white;
+}
+
+.contact-box li {
+    margin-bottom: 8px;
+}
+
+.contact-box li strong {
+    color: rgba(255, 255, 255, 0.8);
+}
+</style>
+
+@endsection
