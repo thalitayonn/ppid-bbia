@@ -104,6 +104,92 @@
             /* Remove border separator */
         }
         
+        .sidebar-menu li.divider {
+            border-top: 1px solid rgba(255,255,255,0.2);
+            margin: 0.5rem 0;
+        }
+        
+        .sidebar-menu li.divider:first-child {
+            display: none;
+        }
+        
+        .admin-profile {
+            padding: 1rem;
+            text-align: center;
+            border-top: 1px solid rgba(255,255,255,0.2);
+            margin-top: 0.5rem;
+        }
+        
+        .admin-avatar {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #3498db, #2980b9);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 600;
+            font-size: 16px;
+            margin: 0 auto 0.5rem;
+            transition: all 0.3s ease;
+        }
+        
+        .sidebar:hover .admin-avatar {
+            width: 50px;
+            height: 50px;
+            font-size: 18px;
+        }
+        
+        .admin-name {
+            font-size: 0;
+            color: white;
+            font-weight: 500;
+            opacity: 0;
+            transition: all 0.3s ease;
+        }
+        
+        .sidebar:hover .admin-name {
+            font-size: 0.9rem;
+            opacity: 1;
+        }
+        
+        .admin-actions {
+            margin-top: 0.5rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.25rem;
+        }
+        
+        .admin-actions a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0.5rem;
+            color: rgba(255,255,255,0.8);
+            text-decoration: none;
+            font-size: 0;
+            opacity: 0;
+            transition: all 0.3s ease;
+            gap: 0.5rem;
+        }
+        
+        .sidebar:hover .admin-actions a {
+            font-size: 0.8rem;
+            opacity: 1;
+            padding: 0.5rem;
+        }
+        
+        .admin-actions a:hover {
+            color: white;
+            background: rgba(255,255,255,0.1);
+            border-radius: 4px;
+        }
+        
+        .admin-actions a i {
+            font-size: 12px;
+        }
+        
         .sidebar-menu a {
             display: flex;
             align-items: center;
@@ -175,30 +261,6 @@
             margin: 0;
             color: #0f2338;
             font-size: 1.5rem;
-            font-weight: 600;
-        }
-        
-        .user-menu {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-        }
-        
-        .user-info {
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-        
-        .user-avatar {
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            background: #3498db;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
             font-weight: 600;
         }
         
@@ -534,6 +596,7 @@
                         <span>Pengajuan Keberatan</span>
                     </a>
                 </li>
+                <li class="divider"></li>
                 <li>
                     <a href="{{ route('admin.reports') }}" class="{{ request()->routeIs('admin.reports') ? 'active' : '' }}">
                         <i class="fas fa-chart-line"></i>
@@ -547,25 +610,45 @@
                     </a>
                 </li>
             </ul>
+            
+            <!-- Admin Profile Section -->
+            <div class="admin-profile">
+                <div class="admin-avatar">{{ strtoupper(substr(auth()->guard('admin')->user()->name, 0, 1)) }}</div>
+                <div class="admin-name">{{ auth()->guard('admin')->user()->name }}</div>
+                <div class="admin-actions">
+                    <a href="{{ url('/') }}" target="_blank">
+                        <i class="fas fa-external-link-alt"></i>
+                        <span>View Site</span>
+                    </a>
+                    <form action="{{ route('admin.logout') }}" method="POST" style="display: inline;">
+                        @csrf
+                        <button type="submit" style="background: none; border: none; color: rgba(255,255,255,0.8); padding: 0.5rem; font-size: 0; opacity: 0; transition: all 0.3s ease; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 0.5rem;" class="logout-btn">
+                            <i class="fas fa-sign-out-alt"></i>
+                            <span>Logout</span>
+                        </button>
+                    </form>
+                </div>
+            </div>
         </div>
+        
+        <style>
+            .sidebar:hover .logout-btn {
+                font-size: 0.8rem !important;
+                opacity: 1 !important;
+                padding: 0.5rem !important;
+            }
+            .logout-btn:hover {
+                color: white !important;
+                background: rgba(255,255,255,0.1) !important;
+                border-radius: 4px !important;
+            }
+        </style>
         
         <!-- Main Content -->
         <div class="main-content">
             <!-- Top Bar -->
             <div class="top-bar">
                 <h1>@yield('page-title', 'Dashboard')</h1>
-                <div class="user-menu">
-                    <div class="user-info">
-                        <div class="user-avatar">A</div>
-                        <span>Admin</span>
-                    </div>
-                    <form action="{{ route('admin.logout') }}" method="POST" style="display: inline;">
-                        @csrf
-                        <button type="submit" class="btn btn-outline" style="padding: 0.5rem 1rem;">
-                            <i class="fas fa-sign-out-alt"></i> Logout
-                        </button>
-                    </form>
-                </div>
             </div>
             
             <!-- Content -->
